@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Raw training checkpoints (~100 MB). Distributed through Zenodo, not git.
+# The portable release file imbert_v1.0_pretrained.pt (29.5 MB) IS tracked:
+# together with imbert_v1.0_pathway_vocab.tsv it makes a fresh clone usable
+# straight away. Remove it from tracking if the repository ever has to carry
+# several weight versions.
+*.ckp
+*.ckpt
+
+# Training outputs
+results/
+data/
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Reproducibility workspace (large data, reference results) -- not part of the release
+validation/
+
+# Pre-cleanup backups of the original code -- keep locally, never publish.
+# They still contain internal server names, absolute paths and experiment
+# code names that were stripped from the released packages.
+*_prev[0-9]*/
+
+# Internal release checklist -- names internal hosts and accounts, submission
+# strategy and sign-off steps. Keep it with the project, out of the public repo.
+PUBLISHING.md

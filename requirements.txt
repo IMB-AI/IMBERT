@@ -1,0 +1,27 @@
+# IMBERT v1.0 -- runtime dependencies
+#
+#   pip install -r requirements.txt
+#
+# For a CPU-only PyTorch (no CUDA download):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements.txt
+#
+# The bounds below are deliberately wide: the code was exercised end to end on
+# both the environment that produced the published results (torch 2.0.1,
+# transformers 4.42.3) and a much newer one (torch 2.14, transformers 5.17,
+# numpy 2.4, pandas 3.0, scikit-learn 1.8).
+#
+# To reproduce the published numbers exactly, use requirements-paper.txt
+# instead -- see validation/REPRODUCTION_RECORD.md.
+
+torch>=2.0,<3
+transformers>=4.30        # only BertConfig is used
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.2
+configobj>=5.0.6
+tqdm>=4.60
+
+# Optional: only finetune_multi_cohort_cv.py needs it, to read the cohort
+# summary workbook.
+# openpyxl>=3.1

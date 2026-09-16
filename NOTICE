@@ -1,0 +1,62 @@
+IMBERT v1.0
+Copyright (c) 2026 Immunobiome Inc.
+
+This product is licensed for non-commercial use only:
+
+    Source code    -> LICENSE         (PolyForm Noncommercial License 1.0.0)
+    Model weights  -> LICENSE-MODEL   (CC BY-NC 4.0)
+
+================================================================================
+ Third-party code
+================================================================================
+
+--------------------------------------------------------------------------------
+1. BERT encoder implementation
+   IMBERT-PT_v1.0/BERT/bert.py
+   IMBERT-FT_v1.0/BERT/bert.py
+   IMBERT-PT_v1.0/BERT/pretrain.py  (MaskedLanguageModel, BERTLM)
+
+Derived from the reference implementation published with the book
+"つくりながら学ぶ! PyTorchによる発展ディープラーニング" by Yutaro Ogawa,
+notebook 8_nlp_sentiment_bert/8-2-3_bert_base.ipynb of
+
+    https://github.com/YutaroOgawa/pytorch_advanced
+
+    Copyright (c) 2019 Yutaro Ogawa
+    MIT License -- full text in THIRD-PARTY-LICENSES/MIT-pytorch_advanced.txt
+
+That implementation in turn cites, as its reference [2], the BERT
+implementation of
+
+    https://github.com/huggingface/pytorch-pretrained-BERT
+    (now https://github.com/huggingface/transformers)
+
+    Copyright 2018 The Google AI Language Team Authors
+    Copyright 2018 The HuggingFace Inc. team
+    Apache License, Version 2.0 -- full text in
+    THIRD-PARTY-LICENSES/Apache-2.0.txt
+
+Changes made by Immunobiome Inc. relative to the upstream implementation
+(Apache License 2.0, section 4b):
+
+  * removed the WordPiece tokenizer and the sentence-pair / next-sentence
+    machinery; IMBERT tokens are metabolic pathways, not word pieces
+  * added a `model_bias` configuration flag so that every linear layer can be
+    built without bias terms, which is how IMBERT v1.0 was trained
+  * added the `attention_show_flg` / `run_pooler` / `encoder_result_layer`
+    plumbing used by the fine-tuning heads
+  * replaced the pre-training head with a pathway-level masked language model
+  * logging, distributed-training and device-selection changes throughout
+
+--------------------------------------------------------------------------------
+2. transformers.BertConfig
+
+`BertConfig` is imported from the `transformers` package as a runtime
+dependency (Apache License 2.0). It is not vendored into this repository.
+
+--------------------------------------------------------------------------------
+3. Data
+
+The pre-training and fine-tuning corpora are public shotgun metagenome samples
+retrieved from NCBI BioProject / ENA. Individual studies retain their own terms
+of use; the accessions are listed in the accompanying publication.
