@@ -1,7 +1,7 @@
 """IMBERT encoder.
 
 Copyright (c) 2026 Immunobiome Inc.
-Licensed under the PolyForm Noncommercial License 1.0.0 -- see LICENSE.
+Licensed under CC BY-NC 4.0 -- see LICENSE. No patent licence is granted.
 
 This file is derived from the BERT reference implementation published with
 "つくりながら学ぶ! PyTorchによる発展ディープラーニング" (Yutaro Ogawa),

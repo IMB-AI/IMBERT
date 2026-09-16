@@ -246,26 +246,26 @@ See `IMBERT-FT_v1.0/README.md` for the three experiment layouts.
 
 ## Licence
 
-**IMBERT is released for non-commercial research use only.** Code and weights
-carry different licences because they are different kinds of work:
+**IMBERT is released for non-commercial research use only**, under
+[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). One licence
+covers everything: the source code, the pre-trained weights, the pathway
+vocabulary, and any checkpoint fine-tuned from them. See `LICENSE`.
 
-| What | Licence | File |
-|---|---|---|
-| Source code | PolyForm Noncommercial License 1.0.0 | `LICENSE` |
-| Model weights and vocabulary | CC BY-NC 4.0 | `LICENSE-MODEL` |
+| | |
+|---|---|
+| Permitted | use, modification, fine-tuning and redistribution — including of derived models — for non-commercial purposes, with attribution |
+| Not permitted | any use primarily directed towards commercial advantage or monetary compensation |
+| Patents | **not licensed.** CC BY-NC 4.0 §2(b)(2) excludes patent and trademark rights, and no patent licence is granted by implication either |
 
-In short: academic, non-profit, government and public research use is free;
-any commercial use requires a separate licence. Both texts are standard,
-unmodified licences — PolyForm Noncommercial is written for software, CC BY-NC
-for data and model artefacts.
+Whether a use is permitted depends on the *purpose*, not on who you are: research
+at a company can be non-commercial, and a paid service run by a non-profit is not.
 
-> Neither licence is one of the templates offered by GitHub's licence picker;
-> every template there is an open-source licence that permits commercial use.
-> GitHub may therefore show "Unknown licence" instead of a licence badge.
+> This is not one of the templates in GitHub's licence picker — every template
+> there is an open-source licence that permits commercial use — so GitHub may
+> show "Unknown licence" rather than a badge.
 
-Commercial use is not granted by either licence. For commercial licensing
-enquiries, contact the corresponding author of the accompanying publication,
-or open an issue at https://github.com/IMB-AI/IMBERT/issues.
+For commercial licensing enquiries, open an issue at
+https://github.com/IMB-AI/IMBERT/issues.
 
 This repository contains third-party code. See `NOTICE` for the derivation and
 `THIRD-PARTY-LICENSES/` for the upstream MIT and Apache-2.0 texts, which must

@@ -1,10 +1,11 @@
 IMBERT v1.0
 Copyright (c) 2026 Immunobiome Inc.
 
-This product is licensed for non-commercial use only:
+This product -- source code, pre-trained weights and pathway vocabulary alike --
+is licensed for non-commercial use only under CC BY-NC 4.0. See LICENSE.
 
-    Source code    -> LICENSE         (PolyForm Noncommercial License 1.0.0)
-    Model weights  -> LICENSE-MODEL   (CC BY-NC 4.0)
+That licence grants copyright permissions only: no patent licence is granted,
+expressly or by implication. See the patent notice at the top of LICENSE.
 
 ================================================================================
  Third-party code
